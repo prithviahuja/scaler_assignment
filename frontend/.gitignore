@@ -6,3 +6,9 @@ out/
 next-env.d.ts
 *.tsbuildinfo
 .DS_Store
+
+# Vercel CLI
+.vercel
+
+.vercel
+.env*

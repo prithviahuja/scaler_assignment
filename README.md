@@ -1,5 +1,18 @@
 # Secure Messaging Platform — Signal Clone
 
+**Live demo:** <https://signal-clone-three-theta.vercel.app>
+**API:** <https://signal-clone-api-eiwu.onrender.com> · [interactive docs](https://signal-clone-api-eiwu.onrender.com/docs)
+**Repository:** <https://github.com/prithviahuja/scaler_assignment>
+
+> Sign in with any demo account below — the verification code is always
+> `123456`. Open the demo in **two different browsers** (or one normal and one
+> private window) as two different people to see real-time messaging, typing
+> indicators and read receipts.
+>
+> The API runs on Render's free tier, which sleeps after inactivity: the very
+> first request may take ~30–50 seconds while the instance wakes up. Everything
+> is instant after that.
+
 A functional clone of Signal Messenger: register with a phone number, manage
 contacts, hold one-on-one and group conversations, and send and receive messages
 in real time — inside a recreation of Signal Desktop's interface.

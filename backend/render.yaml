@@ -1,0 +1,28 @@
+# Render blueprint for the FastAPI backend.
+# Create the service from this file, or configure the same values in the UI.
+services:
+  - type: web
+    name: signal-clone-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SEED_ON_STARTUP
+        value: "true"
+      # Set this to your deployed frontend origin after the first deploy.
+      - key: CORS_ORIGINS
+        value: "*"
+      # Free instances have no persistent disk, so SQLite lives in the
+      # container filesystem and resets on each deploy (the seed data is
+      # recreated automatically). On a paid instance, attach a disk and point
+      # DATABASE_URL at it instead:
+      #   DATABASE_URL=sqlite+aiosqlite:////var/data/signal.db
+      - key: DATABASE_URL
+        value: sqlite+aiosqlite:///./signal.db

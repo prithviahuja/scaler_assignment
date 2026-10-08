@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Build output
+.next/
+out/
+__pycache__/
+*.py[cod]
+
+# Local databases
+*.db
+*.db-wal
+*.db-shm
+
+# Environment
+.env
+.env*.local
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+next-env.d.ts
